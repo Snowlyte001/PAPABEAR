@@ -6,19 +6,19 @@ const responses = {
     "Welcome to ParentGPT! How can I assist you?"
   ],
   "health": [
-    "Ensure your child gets vaccinated. It's crucial for their health.",
-    "A balanced diet is key. Include fruits, vegetables, and proteins.",
-    "Regular check-ups with a doctor are important for early detection of any issues."
+    "A balanced diet is essential for a child's growth and development.",
+    "Regular medical check-ups are important for monitoring your child's health.",
+    "Ensure your child is up-to-date with recommended vaccinations."
   ],
   "education": [
-    "Reading to your child every day can significantly boost their vocabulary.",
-    "Encourage curiosity. Let them explore and ask questions.",
-    "Play-based learning is very effective for young children."
+    "Reading together is a great way to build language skills.",
+    "Encourage your child's curiosity and support their interests.",
+    "Play is a powerful tool for learning and development."
   ],
   "discipline": [
-    "Positive reinforcement is more effective than punishment.",
-    "Be consistent with your rules and consequences.",
-    "Talk to your child about their feelings and help them understand their emotions."
+    "Positive reinforcement can be an effective way to encourage good behavior.",
+    "Clear and consistent boundaries can help children feel secure.",
+    "Helping children understand and manage their emotions is a key part of development."
   ],
   "default": [
     "I'm not sure how to respond to that. Can you please rephrase?",
