@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Header from '../components/Header';
 import TopicSelector from '../components/TopicSelector';
-import { TOPICS } from '../constants/Topics';
+import OfflineStorage from '../services/OfflineStorage';
 
 const HomeScreen = ({ navigation }) => {
+  const [topics, setTopics] = useState([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      await OfflineStorage.syncData();
+      const cachedTopics = await OfflineStorage.loadTopics();
+      setTopics(cachedTopics);
+    };
+    loadData();
+  }, []);
+
   const handleSelectTopic = (topic) => {
     navigation.navigate('Chat', { topic });
   };
@@ -12,7 +23,7 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Header title="ParentGPT" />
-      <TopicSelector topics={TOPICS} onSelectTopic={handleSelectTopic} />
+      <TopicSelector topics={topics} onSelectTopic={handleSelectTopic} />
     </View>
   );
 };
